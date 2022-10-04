@@ -147,11 +147,11 @@ function clearAll()
 function getResidentialElevators()
 {
 
-    var averageApartmentNum = Math.ceil(inputApartments.value / inputFloors.value);
+    var averageApartmentNum = Math.ceil((+inputApartments.value) / (+inputFloors.value));
     var shafts = Math.ceil(averageApartmentNum / 6);
     var columns = Math.ceil(inputFloors.value / 20);
     console.log(shafts * columns);
-    output_elevators.value = shafts * columns;
+    output_elevators.value = (shafts * columns);
     checkPricing();
     getNewPricing()
 }
